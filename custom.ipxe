@@ -1,4 +1,3 @@
-initrd https://andrew.aubury.me/isos/HBCD_PE_x64.iso
 #!ipxe
 ###
 ### netboot.xyz-custom menu example
