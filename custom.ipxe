@@ -3,10 +3,15 @@
 ### netboot.xyz-custom menu
 ###
 
-:start
-echo Hello world!
-sleep 10
-goto custom_exit
+:custom
+clear custom_choice
+menu This is loading from AndrewAubury GH
+item herins_bcd ${space} Load Herins BootCD
+
+:herins_bcd
+kernel https://boot.netboot.xyz/memdisk raw iso
+initrd https://andrew.aubury.me/isos/HBCD_PE_x64.iso
+boot || goto custom_exit
 
 :custom_exit
 exit 0
