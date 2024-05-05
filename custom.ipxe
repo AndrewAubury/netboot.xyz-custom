@@ -6,18 +6,16 @@
 :custom
 clear custom_choice
 menu This is a Test Menu
-item option_two ${space} Loading an ISO
+item option_two ${space} Loading Hiren's Boot CD PE x64 ISO
 choose custom_choice || goto custom_exit
 echo ${cls}
 goto ${custom_choice}
 goto custom_exit
 
-
 :option_two
-kernel https://boot.netboot.xyz/memdisk raw iso
+kernel https://boot.netboot.xyz/memdisk iso raw
 initrd https://andrew.aubury.me/isos/HBCD_PE_x64.iso
 boot || goto custom_exit
-
 
 :custom_exit
 chain utils.ipxe
